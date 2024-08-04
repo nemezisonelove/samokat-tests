@@ -73,6 +73,7 @@ public class OrderScooterTest extends BaseTest {
 
         RentPage rentPage = new RentPage(driver);
         rentPage.waitRentPageWillBeLoaded();
+        rentPage.fillRequiredFields(rentalPeriod, colour, comment);
         rentPage.clickOrderButton();
 
         ConfirmQuestionPage confirmQuestionPage = new ConfirmQuestionPage(driver);
